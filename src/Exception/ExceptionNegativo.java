@@ -1,5 +1,6 @@
 package Exception;
 
+@SuppressWarnings("serial")
 public class ExceptionNegativo extends Exception{
 
 	public ExceptionNegativo(){

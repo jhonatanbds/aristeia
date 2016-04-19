@@ -1,5 +1,7 @@
 package item;
 
+import Personagem.Guerreiro;
+
 public class Veneno extends Pocao {
 
 	public Veneno(String nome, int qtdTurno, double efeito) {

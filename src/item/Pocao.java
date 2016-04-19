@@ -1,5 +1,8 @@
 package item;
 
+import Exception.ExceptionEfeito;
+import Personagem.Guerreiro;
+
 public abstract class Pocao {
 
 	private String nome;

@@ -1,8 +1,10 @@
 package item;
 
+import Personagem.Guerreiro;
+
 public class Aristeia extends Pocao {
 
-	public Aristeia(String nome, int qtdTurno, int efeito) {
+	public Aristeia(String nome, int qtdTurno, double efeito) {
 		super(nome, qtdTurno, efeito);
 	}
 	
@@ -11,7 +13,7 @@ public class Aristeia extends Pocao {
 			setOver(true);
 			g.setForca(g.getDanoReal() + g.getArma().getDano());
 			return true;
-		}		
+		}
 		g.addLife(-g.getLife()*0.3);
 		g.addDano(g.getDano()*0.3);
 		return true;
