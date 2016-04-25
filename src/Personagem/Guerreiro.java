@@ -1,18 +1,21 @@
 package Personagem;
 
 import Exception.ExceptionNomePersonagem;
+import Mochila.Arma;
 
 public class Guerreiro {
 
 	private String nome;
 	private int dano;
 	private double life;
-	private boolean isEnveno;
+	private boolean isVeneno;
+	private Arma armaEquipada;
 	
-	public Guerreiro(String nome, int dano, boolean isEnveno) throws ExceptionNomePersonagem{
+
+	public Guerreiro(String nome, int dano, boolean isVeneno) throws ExceptionNomePersonagem{
 		setNome(nome);
 		setDano(dano);
-		setEnveno(isEnveno);
+		setVeneno(isVeneno);
 	}
 	
 	public String getNome() {
@@ -35,13 +38,12 @@ public class Guerreiro {
 		return setDano(getDano() + dano);
 	}
 
-	public boolean isEnveno() {
-		return isEnveno;
+	public boolean isVeneno() {
+		return isVeneno;
 	}
-	public void setEnveno(boolean isEnveno) {
-		this.isEnveno = isEnveno;
+	public void setVeneno(boolean isVeneno) {
+		this.isVeneno = isVeneno;
 	}
-
 	
 	public double getLife() {
 		return life;
@@ -55,7 +57,11 @@ public class Guerreiro {
 		return setLife(getLife() + life); 
 	}
 	
+	public Arma getArmaEquipada() {
+		return armaEquipada;
+	}
 	
-	
-	
+	public void setArmaEquipada(Arma armaEquipada) {
+		this.armaEquipada = armaEquipada;
+	}
 }

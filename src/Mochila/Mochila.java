@@ -1,8 +1,8 @@
 package Mochila;
 
+import item.Pocao;
 import java.util.ArrayList;
-
-import item.*;
+import Exception.ExceptionNull;
 
 public class Mochila {
 	
@@ -25,28 +25,49 @@ public class Mochila {
 		if(pocoesIsFull()){
 			throw new Exception("Limite de pocoes atingido");
 		}else{
-			if(pocao instanceof Aristeia){
-				pocoes.add(new Aristeia(pocao.getNome(), pocao.getQtdTurno(), pocao.getEfeito()));
-				
-			}else if(pocao instanceof Regen){
-				pocoes.add(new Regen(pocao.getNome(), pocao.getQtdTurno(), pocao.getEfeito()));
-				
-			}else if(pocao instanceof Veneno){
-				pocoes.add(new Veneno(pocao.getNome(), pocao.getQtdTurno(), pocao.getEfeito()));
-			}
-			
+			pocoes.add(pocao);
 		}
 	}
 	
-	public HashSet<Arma> getArmas() {
+	public void adicionaArma(Arma arma) throws Exception{
+		if (armasIsFull()){
+			throw new Exception("Limite de Armas atingido!");
+		}else{
+			armas.add(arma);
+		}
+	}
+	
+	public ArrayList<Arma> getArmas() {
 		return armas;
 	}
 
-	public void setArmas(HashSet<Arma> armas) {
+	public void setArmas(ArrayList<Arma> armas) {
 		this.armas = armas;
 	}
 	
 	public boolean pocoesIsFull(){
 		return pocoes.size() == QTDPOCOES;
+	}
+	
+	public boolean armasIsFull(){
+		return armas.size() == QTDARMAS;
+	}
+	
+	public Pocao procuraPocao(String nomePocao) throws ExceptionNull{
+		for(Pocao p: pocoes){
+			if(p.getNome().equalsIgnoreCase(nomePocao)){
+				return p;
+			}
+		}
+		throw new ExceptionNull();
+	}
+	
+	public Arma procuraArma(String nomeArma){
+		for(Arma a: armas){
+			if(a.getNome().equalsIgnoreCase(nomeArma)){
+				return a;
+			}
+		}
+		return null;
 	}
 }

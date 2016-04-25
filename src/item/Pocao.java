@@ -9,12 +9,13 @@ public abstract class Pocao {
 	private int qtdTurno;
 	private double efeito;
 	private boolean over;
-
-	public Pocao(String nome, int qtdTurno, double efeito) {
+	
+	
+//	tem que ver esse exception aqui...                       ↓        
+	public Pocao(String nome, int qtdTurno, double efeito) throws ExceptionEfeito {
 		setNome(nome);
 		setQtdTurno(qtdTurno);
 		setEfeito(efeito);
-
 	}
 
 	public boolean isOver() {
@@ -49,7 +50,7 @@ public abstract class Pocao {
 		qtdTurno--;
 	}
 
-	public void setEfeito(double efeito) {
+	public void setEfeito(double efeito) throws ExceptionEfeito {
 		if (efeito < 50 && efeito > 100)
 			throw new ExceptionEfeito();
 

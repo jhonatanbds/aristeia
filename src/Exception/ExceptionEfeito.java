@@ -4,7 +4,7 @@ package Exception;
 @SuppressWarnings("serial")
 public class ExceptionEfeito extends Exception{
 	public ExceptionEfeito(){
-		super("feito esta fora do range habitual, Padawan");
+		super("Efeito esta fora do range habitual, Padawan");
 	}
 
 }

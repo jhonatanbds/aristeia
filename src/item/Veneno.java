@@ -1,10 +1,11 @@
 package item;
 
+import Exception.ExceptionEfeito;
 import Personagem.Guerreiro;
 
 public class Veneno extends Pocao {
 
-	public Veneno(String nome, int qtdTurno, double efeito) {
+	public Veneno(String nome, int qtdTurno, double efeito) throws ExceptionEfeito {
 		super(nome, qtdTurno, efeito);
 	}
 
