@@ -25,7 +25,7 @@ public class Loja {
 		personagem = new Guerreiro(nomePersongem, dano, isVeneno);
 	}
 	
-	public void adicionaPocao(String nomePocao){
+	public void compraPocao(String nomePocao){
 //		Pocao pocao = new 
 	}
 	

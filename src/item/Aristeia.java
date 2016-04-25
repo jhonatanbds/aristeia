@@ -2,9 +2,9 @@ package item;
 
 import Exception.ExceptionEfeito;
 import Personagem.Guerreiro;
-
+	
 public class Aristeia extends Pocao {
-
+	
 //	Como fazer a duracao do efeito dessa pocao? Vai ser temporal? Quantidade de turnos? Ate o fim da luta? enfim...
 //	Pensar, inclusive, nas outras pocoes sobre a duracao do efeito.
 	
@@ -22,6 +22,4 @@ public class Aristeia extends Pocao {
 		g.addDano((int) (g.getDano()*0.3));
 		return true;
 	}
-	
-
 }

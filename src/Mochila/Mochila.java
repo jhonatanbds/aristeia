@@ -20,7 +20,6 @@ public class Mochila {
 		return pocoes;
 	}
 	
-	//ajeitar pra pocao ser instanciavele colocar o array como pocao mesmo
 	public void adicionaPocao(Pocao pocao) throws Exception{
 		if(pocoesIsFull()){
 			throw new Exception("Limite de pocoes atingido");

@@ -2,6 +2,7 @@ package Personagem;
 
 import Exception.ExceptionNomePersonagem;
 import Mochila.Arma;
+import Mochila.Mochila;
 
 public class Guerreiro {
 
@@ -10,12 +11,13 @@ public class Guerreiro {
 	private double life;
 	private boolean isVeneno;
 	private Arma armaEquipada;
-	
+	private Mochila mochila;
 
 	public Guerreiro(String nome, int dano, boolean isVeneno) throws ExceptionNomePersonagem{
 		setNome(nome);
 		setDano(dano);
 		setVeneno(isVeneno);
+		mochila = new Mochila();
 	}
 	
 	public String getNome() {
@@ -60,8 +62,11 @@ public class Guerreiro {
 	public Arma getArmaEquipada() {
 		return armaEquipada;
 	}
-	
 	public void setArmaEquipada(Arma armaEquipada) {
 		this.armaEquipada = armaEquipada;
+	}
+	
+	public void usaPocao(String nomePocao){
+		
 	}
 }
